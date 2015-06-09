@@ -26,13 +26,11 @@
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>fs-api</artifactId>
                 <version>${firstspirit.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>fs-access</artifactId>
                 <version>${firstspirit.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
