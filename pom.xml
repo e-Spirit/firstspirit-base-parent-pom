@@ -159,17 +159,18 @@
                     <executions>
                         <execution>
                             <id>copy-dependencies</id>
-                            <phase>package</phase>
+                            <phase>process-classes</phase>
                             <goals>
                                 <goal>copy-dependencies</goal>
                             </goals>
                             <configuration>
-                                <outputDirectory>${basedir}/target/dependencies/</outputDirectory>
+                                <outputDirectory>${project.build.directory}/dependencies/</outputDirectory>
                                 <overWriteReleases>false</overWriteReleases>
                                 <overWriteSnapshots>false</overWriteSnapshots>
                                 <overWriteIfNewer>true</overWriteIfNewer>
                                 <excludeTransitive>false</excludeTransitive>
                                 <includeScope>runtime</includeScope>
+                                <excludeArtifactIds>fs-access</excludeArtifactIds>
                             </configuration>
                         </execution>
                     </executions>
