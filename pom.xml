@@ -4,7 +4,7 @@
 
     <groupId>com.espirit.ps.maven</groupId>
     <artifactId>firstspirit-base-parent-pom</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -25,27 +25,27 @@
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>fs-api</artifactId>
-                <version>${firstspirit.version}</version>
+                <version>[5.0.210,)</version>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>fs-access</artifactId>
-                <version>${firstspirit.version}</version>
+                <version>[5.0.210,)</version>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>client</artifactId>
-                <version>${firstspirit.version}</version>
+                <version>[5.0.210,)</version>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>server</artifactId>
-                <version>${firstspirit.version}</version>
+                <version>[5.0.210,)</version>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>wrapper</artifactId>
-                <version>${firstspirit.wrapper.version}</version>
+                <version>[3.5.12,)</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
