@@ -4,7 +4,7 @@
 
     <groupId>com.espirit.ps.maven</groupId>
     <artifactId>firstspirit-base-parent-pom</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -246,6 +246,10 @@
             <name>ps-release-local</name>
             <url>${artifactoryUrl}</url>
         </repository>
+		<site>
+			<id>psdev</id>
+			<url>scp://psdev.e-spirit.de/var/www/html/maven/sites/${project.artifactId}/${project.version}/</url>
+		</site>
     </distributionManagement>
 
 
