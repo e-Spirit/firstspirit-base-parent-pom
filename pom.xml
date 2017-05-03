@@ -4,7 +4,7 @@
 
     <groupId>com.espirit.ps.maven</groupId>
     <artifactId>firstspirit-base-parent-pom</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -218,10 +218,15 @@
                         </execution>
                     </executions>
                 </plugin>
+                
                 <plugin>
                     <artifactId>maven-install-plugin</artifactId>
                     <version>2.5.2</version>
+                    <inherited>false</inherited>
                     <executions>
+                    	<!-- 
+                    		the install plugin is only used to install the pom file as the artifact of this bundle. It has no relation to any  
+                    	-->
                         <execution>
                             <id>overwrite-pom</id>
                             <phase>install</phase>
