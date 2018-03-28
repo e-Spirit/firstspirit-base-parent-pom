@@ -4,7 +4,7 @@
 
     <groupId>com.espirit.ps.maven</groupId>
     <artifactId>firstspirit-base-parent-pom</artifactId>
-    <version>1.0.3</version>
+    <version>1.1.0</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -18,6 +18,8 @@
         <maven-compiler.source-version>1.7</maven-compiler.source-version>
         <maven-compiler.target-version>1.7</maven-compiler.target-version>
         <artifactoryUrl>https://artifactory.e-spirit.de/artifactory/ps-release-local</artifactoryUrl>
+        
+		<sonar.projectKey>PS_${project.groupId}:${project.artifactId}</sonar.projectKey>
     </properties>
 
     <dependencyManagement>
@@ -251,10 +253,6 @@
             <name>ps-release-local</name>
             <url>${artifactoryUrl}</url>
         </repository>
-		<site>
-			<id>psdev</id>
-			<url>scp://psdev.e-spirit.de/var/www/html/maven/sites/${project.artifactId}/${project.version}/</url>
-		</site>
     </distributionManagement>
 
 
