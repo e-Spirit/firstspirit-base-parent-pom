@@ -249,11 +249,10 @@
 
     <distributionManagement>
         <repository>
-            <id>espirit-artifactory</id>
-            <name>ps-release-local</name>
+            <id>artifactory</id>
+            <name>artifactory</name>
             <url>${artifactoryUrl}</url>
         </repository>
     </distributionManagement>
-
 
 </project>
