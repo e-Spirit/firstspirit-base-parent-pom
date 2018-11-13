@@ -4,7 +4,7 @@
 
     <groupId>com.espirit.ps.maven</groupId>
     <artifactId>firstspirit-base-parent-pom</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <packaging>pom</packaging>
 
     <organization>
@@ -15,33 +15,22 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven-compiler.source-version>1.7</maven-compiler.source-version>
-        <maven-compiler.target-version>1.7</maven-compiler.target-version>
+        <maven-compiler.source-version>1.8</maven-compiler.source-version>
+        <maven-compiler.target-version>1.8</maven-compiler.target-version>
         <artifactoryUrl>https://artifactory.e-spirit.de/artifactory/ps-release-local</artifactoryUrl>
-        
-		<sonar.projectKey>PS_${project.groupId}:${project.artifactId}</sonar.projectKey>
+        <sonar.projectKey>PS_${project.groupId}:${project.artifactId}</sonar.projectKey>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
-                <artifactId>fs-api</artifactId>
-                <version>[5.0.210,)</version>
+                <artifactId>fs-isolated-runtime</artifactId>
+                <version>[5.2.181007,)</version>
             </dependency>
             <dependency>
                 <groupId>de.espirit.firstspirit</groupId>
                 <artifactId>fs-access</artifactId>
-                <version>[5.0.210,)</version>
-            </dependency>
-            <dependency>
-                <groupId>de.espirit.firstspirit</groupId>
-                <artifactId>client</artifactId>
-                <version>[5.0.210,)</version>
-            </dependency>
-            <dependency>
-                <groupId>de.espirit.firstspirit</groupId>
-                <artifactId>server</artifactId>
                 <version>[5.0.210,)</version>
             </dependency>
             <dependency>
@@ -52,7 +41,7 @@
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.16.4</version>
+                <version>1.18.4</version>
             </dependency>
             <dependency>
                 <groupId>log4j</groupId>
@@ -63,13 +52,13 @@
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-module-junit4</artifactId>
-                <version>1.6.2</version>
+                <version>1.7.4</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.powermock</groupId>
                 <artifactId>powermock-api-mockito</artifactId>
-                <version>1.4.12</version>
+                <version>1.7.4</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -110,7 +99,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.1</version>
+                    <version>3.8.0</version>
                     <configuration>
                         <source>${maven-compiler.source-version}</source>
                         <target>${maven-compiler.target-version}</target>
@@ -122,7 +111,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.17</version>
+                    <version>2.22.1</version>
                     <configuration>
                         <excludes>
                             <exclude>**/*ITest.java</exclude>
@@ -133,7 +122,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.3.1</version>
+                    <version>3.1.0</version>
                     <configuration>
                         <archive>
                             <addMavenDescriptor>false</addMavenDescriptor>
@@ -157,7 +146,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.3</version>
+                    <version>3.1.1</version>
                     <executions>
                         <execution>
                             <id>copy-dependencies</id>
@@ -179,7 +168,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-failsafe-plugin</artifactId>
-                    <version>2.9</version>
+                    <version>2.22.1</version>
                     <executions>
                         <execution>
                             <id>integration-test</id>
@@ -197,7 +186,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.6</version>
+                    <version>3.1.0</version>
                     <executions>
                         <execution>
                             <id>replace-pom-placeholder</id>
